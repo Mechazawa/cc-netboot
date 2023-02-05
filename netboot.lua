@@ -34,7 +34,7 @@ local function doList(targetDir, url, headers)
             return err
         end
 
-        output.write(file.readAll())
+        output.write(file.readAll() or '')
         output.close()
         file.close()
     end
